@@ -15,33 +15,34 @@ After restart give the user name and create password for your linux account name
 
 ## For Ubuntu 22.04 by WSL installation:
 Update Ubuntu Packages. In terminal execute following:
-> 
-sudo apt-get update
+> sudo apt-get update
 sudo apt-get upgrade
 sudo apt install -y build-essential python3 python3-venv python3-pip make
-> 
+
+We are going to use pre-build binaries, developed by 'precision innovations'
+
 Installing klayout
-wget https://www.klayout.org/downloads/Ubuntu-22/klayout_0.28.15-1_amd64.deb
-sudo dpkg -i klayout_0.28.15-1_amd64.deb
-While installing if we get any error for dependency run following:
-sudo apt --fix-broken install
-sudo dpkg -i klayout_0.28.15-1_amd64.deb
-Installing yosys
-wget
-https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-01-17/oss-c
-ad-suite-linux-x64-20240117.tgz
-tar -xzvf oss-cad-suite-linux-x64-20240117.tgz
+> wget https://www.klayout.org/downloads/Ubuntu-22/klayout_0.28.15-1_amd64.deb
+> sudo dpkg -i klayout_0.28.15-1_amd64.deb
+
+While installing if we get any error for dependency run the following command:
+>sudo apt --fix-broken install
+>sudo dpkg -i klayout_0.28.15-1_amd64.deb
+
+Install yosys
+> wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-01-17/oss-cad-suite-linux-x64-20240117.tgz
+> tar -xzvf oss-cad-suite-linux-x64-20240117.tgz
+
 Download the OpenROAD binary
-ubuntu 22.04 :
-wget
-https://github.com/Precision-Innovations/OpenROAD/releases/download/2024-01-16
-/openroad_2.0_amd64-ubuntu22.04-2024-01-16.deb
-sudo apt install ./openroad_2.0_amd64-ubuntu22.04-2024-01-16.deb
-Download ORFS repo
-cd
-git clone https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
+> wget https://github.com/Precision-Innovations/OpenROAD/releases/download/2024-01-16/openroad_2.0_amd64-ubuntu22.04-2024-01-16.deb
+> sudo apt install ./openroad_2.0_amd64-ubuntu22.04-2024-01-16.deb
+
+Download ORFS (OpenRoad Flow Script) repo. Its always good idea to create a folder and start working at that folder.
+> cd
+> git clone https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
+
 Install editor tool
-sudo apt-get install gedit
+> sudo apt-get install gedit
 
 
 ## For Ubuntu20.04 with local/VM installation:

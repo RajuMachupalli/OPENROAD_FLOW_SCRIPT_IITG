@@ -12,10 +12,10 @@ After restart give the user name and create password for your linux account name
 
 ## For Ubuntu 22.04 by WSL installation:
 In terminal execute following:
-''Update Ubuntu Packages
+' Update Ubuntu Packages
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt install -y build-essential python3 python3-venv python3-pip make''
+sudo apt install -y build-essential python3 python3-venv python3-pip make '
 Installing klayout
 wget https://www.klayout.org/downloads/Ubuntu-22/klayout_0.28.15-1_amd64.deb
 sudo dpkg -i klayout_0.28.15-1_amd64.deb

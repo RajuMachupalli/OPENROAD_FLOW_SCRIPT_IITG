@@ -11,4 +11,10 @@
 
 -> Planning to opensource few configurations.
 
-# Session 2: Expert Lecture by Prof. Anand Balusu
+# Session 2: Expert Lecture by Prof. Anand Balusu, IIT Roorkee
+Title: 'A Reliable and Robus Framework for accurate timing sign-off of Digital ICs'
+1. Variabilioty issues:
+     a. Spacial variation: Impact of stress variability: channel stress with number of fingers.
+     b. Temporal variability: when apply -ve vgs, generates traps at si-sio2 interface. Hot carrier injection mechanism: at saturation stage, electron can enter into gate-oxide region. These two are againg effects.
+
+   Solution: considering variations and making variation aware timing models. Derive model co-efficients as a function of device level parameter variations.

@@ -4,7 +4,7 @@ sudo apt-get update; sudo apt-get upgrade; sudo apt install -y build-essential p
 
 wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-01-17/oss-cad-suite-linux-x64-20240117.tgz
 ## Install Linux on windows 10/11 through WSL
-open cmd window and type
+Open cmd window and type
 > wsl –install
 
 While installing if we get option to select distribution name :
@@ -15,10 +15,11 @@ After restart give the user name and create password for your linux account name
 
 ## For Ubuntu 22.04 by WSL installation:
 In terminal execute following:
-' Update Ubuntu Packages
+> Update Ubuntu Packages
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt install -y build-essential python3 python3-venv python3-pip make '
+sudo apt install -y build-essential python3 python3-venv python3-pip make
+> 
 Installing klayout
 wget https://www.klayout.org/downloads/Ubuntu-22/klayout_0.28.15-1_amd64.deb
 sudo dpkg -i klayout_0.28.15-1_amd64.deb

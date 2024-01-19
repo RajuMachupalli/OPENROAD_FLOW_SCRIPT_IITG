@@ -14,8 +14,8 @@ While installing if we get option to select distribution name :
 After restart give the user name and create password for your linux account name.
 
 ## For Ubuntu 22.04 by WSL installation:
-In terminal execute following:
-> Update Ubuntu Packages
+Update Ubuntu Packages. In terminal execute following:
+> 
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt install -y build-essential python3 python3-venv python3-pip make

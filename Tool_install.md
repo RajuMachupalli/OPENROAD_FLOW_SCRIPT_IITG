@@ -6,8 +6,11 @@ wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-01-17
 ## Install Linux on windows 10/11 through WSL
 open cmd window and type
 > wsl –install
+
 While installing if we get option to select distribution name :
+
 > wsl --install -d Ubuntu-22.04
+
 After restart give the user name and create password for your linux account name.
 
 ## For Ubuntu 22.04 by WSL installation:

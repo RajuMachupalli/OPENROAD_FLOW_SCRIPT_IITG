@@ -18,6 +18,24 @@
 
    synthesis output: netlist (.v), .sdc
 
+
+step 1:
+![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/7b22f945-a15e-4446-852b-c3b67ac3cf10)
+
+proc: converts all operations to rtl
+opt: optimization
+fsm: FSM converts
+memory: converts RTL
+techmap: maps to technology
+dfflibmap -liberty mycells.lib 
+abc: mapping logic to mycells.lib
+clean
+write_verilog synth.v: write the gatelevel netlist
+
+
+
+
+
 ## Floorplan
 define size and shape of core.
 placing macros and IO pads in core area.
@@ -41,3 +59,4 @@ Blockages: soft, hard, partial blockages: to avoid keeping all the cells at same
 
 fly lines: 
 ## Placement
+

@@ -18,5 +18,18 @@ IC Mask Vulnerabilitis Prevention: Split manufacturing. Utilizing specialized ma
 PUFs: physically unclonable ...
 
 # Session 2: Concept of SOC Design by A. Sahu, IIT Guwahati
-SOC Components: Core, memory, 'Timer, DMA, PIC, UART, Peripheral controller': These are most important components in SOC. 
--> OPENSOC.
+SOC Components: Core, memory, 'Timer, DMA, PIC, UART, Peripheral controller': These are most important components in SOC, and driver writting skill. 
+-> 
+
+![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/1badae39-dac5-4252-bdad-37020d1b62ad)
+
+-> OPENSOC
+
+![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/fa8972bc-21d5-430f-8044-bed59915c947)
+
+-> IO Control devices
+![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/86437a7c-ca29-48b8-9e34-e52010a176aa)
+
+8255: PPC programmable peripheral controller
+
+

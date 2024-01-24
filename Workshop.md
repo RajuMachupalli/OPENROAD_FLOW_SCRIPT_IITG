@@ -1,5 +1,4 @@
-# This contains theoritical explanation for ASIC design flow
-
+# This contains theoretical explanation for ASIC design flow
 
 # Day3: Friday Januray 19 2024
 ## Synthesis flow

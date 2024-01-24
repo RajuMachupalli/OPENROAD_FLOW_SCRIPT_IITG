@@ -1,22 +1,25 @@
-# This is contains workshop flow
-
+# This contains theoritical explanation for ASIC design flow
 
 
 # Day3: Friday Januray 19 2024
 ## Synthesis flow
+Requirements: 
+
 1. Design files
       a. RTL code (.v)
-       b. Constraint files (.sdc)
-3. Technology files:
+      b. Constraint files (.sdc)
+
+2. Technology files:
      a. .lib file: contains cells information, like power, capacitance, delay at different pins levels. logical information.
      b. .lef file: contains physical information of cells. size, pin name, pin location
 
 
-   technology file: layer name, type and direction of metal, pitch, 
+technology file: layer name, type and direction of metal, pitch, 
    .def file: cell info, pin
-   two types of contraints: optimization constrains and design constraints
 
-   synthesis output: netlist (.v), .sdc
+Two types of contraints: optimization constrains and design constraints
+
+Synthesis output: netlist (.v), .sdc
 
 
 step 1:
@@ -58,5 +61,9 @@ Place macros
 Blockages: soft, hard, partial blockages: to avoid keeping all the cells at same place
 
 fly lines: 
-## Placement
 
+# Day 6
+## Placement
+Process of placing all standard cells.
+
+Goal: Timing, Area, Routable. Minimize congestion, cell density and no DRC violation.

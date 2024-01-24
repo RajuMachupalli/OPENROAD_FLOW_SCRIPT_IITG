@@ -14,8 +14,7 @@ Requirements:
      b. .lef file: contains physical information of cells. size, pin name, pin location
 
 
-technology file: layer name, type and direction of metal, pitch, 
-   .def file: cell info, pin
+technology file contains: layer name, type and direction of metal, pitch. .def file contains: cell info, pin
 
 Two types of contraints: optimization constrains and design constraints
 
@@ -26,27 +25,28 @@ step 1:
 ![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/7b22f945-a15e-4446-852b-c3b67ac3cf10)
 
 proc: converts all operations to rtl
+
 opt: optimization
+
 fsm: FSM converts
+
 memory: converts RTL
+
 techmap: maps to technology
+
 dfflibmap -liberty mycells.lib 
+
 abc: mapping logic to mycells.lib
-clean
+
+clean: cleans temporary files generated in above flow.
+
 write_verilog synth.v: write the gatelevel netlist
 
 
-
-
-
 ## Floorplan
-define size and shape of core.
-placing macros and IO pads in core area.
-
-
+Define size and shape of core. Place macros and IO pads in core area.
 
 inputs: netlist (.v)
-
 ![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/b84199c3-e7f0-4e7a-b9e2-2bcc8c1f9b4e)
 
 Sanity check:
@@ -58,7 +58,9 @@ sanity check 2:
 Floorplan control parameters: Aspect ratio and core utilization
 
 Place macros
+
 Blockages: soft, hard, partial blockages: to avoid keeping all the cells at same place.
+
 requires macro's library files, size, orientation and location details.
 
 fly lines: 

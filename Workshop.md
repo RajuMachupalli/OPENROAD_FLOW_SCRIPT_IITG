@@ -58,7 +58,8 @@ sanity check 2:
 Floorplan control parameters: Aspect ratio and core utilization
 
 Place macros
-Blockages: soft, hard, partial blockages: to avoid keeping all the cells at same place
+Blockages: soft, hard, partial blockages: to avoid keeping all the cells at same place.
+requires macro's library files, size, orientation and location details.
 
 fly lines: 
 
@@ -67,3 +68,49 @@ fly lines:
 Process of placing all standard cells.
 
 Goal: Timing, Area, Routable. Minimize congestion, cell density and no DRC violation.
+
+Inputs: Netlist, Physical libraries, Floorplan DEF file, Timing libraries, RC cornesrs, SDC file, UPF file (if the design has multiple voltage domains)
+![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/14f256be-649c-48c4-a74a-c5515db3c005)
+
+Checks: Clean netlist, Floor plan def should have: proper pin placement, macros and pre-placed cells in fix status and power planning free of DRCs, don't use or don't touch cells.
+
+Pre-placement: Checks pre-placement cells. Macros, tap cells. 
+Placement: 1.Global placement: to get approximate initial location according to timing, power and pre-placed cells 2. Legalization and 3. High fanout net synthesis: buffering high fanout nets.
+
+Post-placement: Tries to meet all design timing requirements, WNS, TNS and DRVs.
+
+Congestion: Routing congestion analysis, cell congestion analysis.
+
+Congestion fixes: add placement blockages. Review the macro placement. Reduce local cell density using density screens. Congestion driven placement with high effort.
+![image](https://github.com/RajuMachupalli/OPENROAD_FLOW_SCRIPT_IITG/assets/52839597/e88c7194-2f66-4302-ab55-fb5245334007)
+
+## Clock Tree Synthesis
+Process of distributing clock signals to clock pins of sequential circuits
+
+Checks: Placement completed, power and ground nets pre-routed, acceptable congestion, acceptable timing, no max cap/trans violations.
+
+Goals: minimum skew, no or acceptable timing violations, no or minimal congession, acceptable power number, acceptable utilization jumps at post CTS.
+
+Inputs: Placement def, Target latency and skew
+
+Outputs: Timing report, skew report, insertion delay, 
+
+## Routing
+Making signal connections between signal pins using metals
+
+Objective: Skew requirements, open/short circuit clean, must meet setup and timing margin.
+
+Goals: Minimize the total interconnect length, minimize the critical path delay, minimize the number of layers change, meeting timing DRCs, eliminate cross-tols noise.
+
+Routing flow: Global routing, track assignment, detail routing, and search and repair.
+
+Global routing: Identifies routable paths.
+Detailed paths: 
+search and repair: 
+
+Filler cell insertion: non logical cells or filler cells insderted to make n/p-wells continuty.
+
+Outputs: SPEF file, GDS-II, netlist, sdc. (OpenRC used to extract SPEF files)
+
+
+OpenSTA will follow for static timing analysis.

@@ -13,6 +13,6 @@ Step 5: Register transfer level behavior: Express everything interms of register
 Step 6: Datapath synthesis and generation.
 Step 7: Control signals
 
-HLS Tools: Calypto is for ASIC design. ('XLS', https://google.github.io/xls/) is open source HLS from google. Vivado HLS for Xilinx FPGAs.
+HLS Tools: Calypto is for ASIC design. (XLS 'https://google.github.io/xls/') is open source HLS from google. Vivado HLS for Xilinx FPGAs.
 
 HLS Demo: 

@@ -175,3 +175,25 @@ To remove entire logs/results/reports for specific run, use
 
 make DESIGN_CONFIG=./designs/nangate45/gcd/config.mk clean_all
 
+# DAY 4
+pip3 install -U --user 'ray[default,tune]==1.13.0' ax-platform hyperopt nevergrad optuna pandas
+pip3 install -U --user colorama==0.4.4 bayesian-optimization==1.4.0
+
+Auto tuner loading
+cd util
+python3.9 distributed.py --design riscv32i --platform asap7 --config ../designs/asap7/riscv32i/autotuner.json tune
+
+To view PPA in tensorboard
+tensorboard --logdir= ../logs/nangate45/gcd/test-tune-2024-01-22-11-47-27/
+
+# Day 5
+https://openroad-flow-scripts.readthedocs.io/en/latest/contrib/PlatformBringUp.html
+https://github.com/Precision-Innovations/opensta_power_example
+https://github.com/Precision-Innovations/opensta_power_example/blob/main/aes_power_vcd/aes_power.tcl 
+
+Observe sky130hd/microwatt for manual macro placement
+
+issue posting on OpenRoad github using script_issue command for better support from community.
+
+External links for eda tool enhancement. 
+
